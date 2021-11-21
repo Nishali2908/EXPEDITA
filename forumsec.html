@@ -1,0 +1,182 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Forum</title>
+  
+    <link rel="stylesheet" type="text/css" href="css/forum.css">
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href=index.html>
+          <button type="button" class="homeimg">
+                        
+        
+         </button>
+        </a>
+        
+        <img src="css/myspace.png" alt="bar" align=right width="50" height="50">
+         <nav>
+          <ul class="menu">
+           
+       
+          
+          </ul>
+          
+          
+
+        </nav>
+      </div> 
+
+    </header> 
+    <div class="page-wrapper">
+    </div>      
+    <br>
+    <br>
+    <br>
+    <br>
+
+<body>
+    <img src="css/forumweb.jpg" alt="FORUM" class="center">
+    <div class="main">
+        <ol>
+        </ol>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        console.log(threads);
+        var container = document.querySelector('ol');
+        for (let thread of threads) {
+            var html = `
+            <li class="row">
+                <a href="thread.html?${thread.id}">
+                    <h4 class="title">
+                        ${thread.title}
+                    </h4>
+                    <div class="bottom">
+                        <p class="timestamp">
+                            ${new Date(thread.date).toLocaleString()}
+                        </p>
+                        <p class="comment-count">
+                            ${thread.comments.length} comments
+                        </p>
+
+              
+
+                    </div>
+                </a>
+            </li>
+            `
+
+
+            
+            container.insertAdjacentHTML('beforeend', html);
+        }
+    </script>
+    <style>
+        body {
+            margin: 10px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: skyblue;
+            padding: 0 40px;
+        }
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+    </style>
+
+
+<br>
+<br>
+<br>
+<br> <br>
+<br><br>
+<br>
+<br>
+<br> <br>
+<br>
+<br> 
+<br> 
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3 class="logo-text"><span>Expedita</span></h3>
+      <p><i>One platform for all resources</i></p>
+      <div class="contact">
+        <span><i class="fas fa-phone"></i>&nbsp; 123-456-789</span>
+        <span><i class="fas fa-envelope"></i> &nbsp; info@expedita.com</span>
+      </div>
+
+
+    </div> 
+
+
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <br>
+      <ul>
+        <a href="resources.html" style="color: white"><li>Resources</li></a>
+        <a href="forum.html" style="color: white"><li>Forum</li></a>
+        <a href="#" style="color: white"><li>Classifieds</li></a>
+        <a href="oppurtunity.html" style="color: white"><li>Opportunities</li></a>
+        <a href="#" style="color: white"><li>About Us</li></a>
+        <a href="#" style="color: white"><li>Terms & Conditions</li></a>
+
+      </ul>
+    </div>
+
+
+    <div class="footer-section contact-form">
+      <h3>Contact us</h3>
+      <br>
+      <form action="index.html" method="post">
+        <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+        <br>
+        <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+        <br>
+        <br>
+        <button type="submit" >
+          
+           Send 
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; expedita.com | Designed by
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
